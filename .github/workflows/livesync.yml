@@ -7,10 +7,14 @@ on:
 
 jobs:
   sync:
+
     runs-on: ubuntu-latest
+
     steps:
       - uses: tgymnich/fork-sync@v1.8
         with:
-          owner: llvm
+          token: ${{ secrets.PERSONAL_TOKEN }}
+          owner: dispiny
+          repo: tomcat-helloworld
           base: master
           head: master
